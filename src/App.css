@@ -1,0 +1,281 @@
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  /* height: 100vh; */
+  /**/
+  background-image: url('../public/assets/1329016.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  display: block;
+  object-position: center;
+  object-fit: cover;
+}
+
+h3 {
+  color: #e4e7ee;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 50%;
+  place-content: center;
+}
+
+input[type="radio"]:checked {
+  background-color: rgb(43, 76, 226);
+}
+
+
+label {
+  color: rgb(231, 177, 177);
+  display: flex;
+  align-items: center;
+}
+
+label:hover {
+  cursor: pointer;
+  color: black;
+}
+
+.btn {
+  float: right;
+  margin-left: auto;
+}
+
+/* Mobile First */
+
+.Home {
+  display: grid;
+  grid-template-columns: 1fr;
+  /* grid-template-rows: repeat(3, 100px) 1fr; */
+
+  /* gap: 20px; */
+  row-gap: 50px;
+  font-weight: 700;
+  padding: 50px;
+}
+
+/* Message Controls */
+
+.inputs {
+  display: grid;
+  /* height: 30px; */
+}
+
+.inputs * {
+  border: 1px solid #e4e7ee;
+  border-radius: 15px;
+  font-size: 25px;
+  background-color: transparent;
+  padding: 10px;
+  color: white;
+}
+
+.inputs input {
+  padding-left: 15px;
+  font-size: 25px;
+  background-color: transparent;
+  border-bottom-right-radius: 0;
+}
+
+.inputs select {
+  appearance: none;
+  width: 200px;
+  background-color: transparent;
+  cursor: pointer;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  /* border-left: none; */
+  float: right;
+  margin-left: auto;
+  width: 40%;
+}
+
+.inputs select option {
+  background-color: rgb(35, 35, 58);
+  outline-style: none;
+
+}
+
+.inputs *:focus {
+  background-color: rgb(35, 35, 58);
+  outline-style: none;
+  border-bottom-right-radius: 0;
+}
+
+select option:hover {
+  background-color: black;
+}
+
+/*  */
+
+/* Positions */
+
+.positionsContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+/* Themes */
+.themesContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* Options */
+
+.optionsContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  /* justify-items: center; */
+  /* place-items: center; */
+}
+
+.optionsContainer label {
+  display: flex;
+  align-items: center;
+}
+
+.autoClose span {
+  margin-left: 15px;
+}
+
+.autoClose input {
+  width: 35%;
+  background-color: transparent;
+  border-radius: 5px;
+}
+
+@media (min-width: 500px) {
+  .App {
+    height: 100vh;
+  }
+}
+.Home {
+  font-size: 30px;
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+
+  h3 {
+    color: black;
+  }
+
+  .Home {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 100px) 1fr;
+    gap: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 50px;
+  }
+
+  .inputs {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+    /* height: 30px; */
+  }
+
+  .inputs * {
+    border: 1px solid #e4e7ee;
+    border-radius: 15px;
+    font-size: 25px;
+    background-color: transparent;
+    padding: 10px;
+    color: white;
+  }
+
+  .inputs input {
+    padding-left: 15px;
+    font-size: 25px;
+    background-color: transparent;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: none;
+  }
+
+  .inputs select {
+    appearance: none;
+    width: 200px;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 15px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: none;
+  }
+
+  .inputs select option {
+    background-color: rgb(35, 35, 58);
+    outline-style: none;
+
+  }
+
+  .inputs *:focus {
+    background-color: rgb(35, 35, 58);
+    outline-style: none;
+    border-bottom-right-radius: 0;
+  }
+
+  select option:hover {
+    background-color: black;
+  }
+
+  /* Positions */
+
+  .positionsContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+  }
+
+  /* Themes */
+  .themesContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Options */
+
+  .optionsContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .autoClose span {
+    margin-left: 15px;
+  }
+
+  .autoClose input {
+    width: 35%;
+    background-color: transparent;
+    border-radius: 5px;
+  }
+}
